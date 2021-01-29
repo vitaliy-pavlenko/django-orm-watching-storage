@@ -31,7 +31,7 @@ class Visit(models.Model):
 
     def get_duration(self):
         leaved_at = self.leaved_at or timezone.localtime()
-        return leaved_at - self.entered_at
+        return (leaved_at - self.entered_at).total_seconds()
 
     def is_visit_long(self, max_minutes=60):
         total_minutes = get_total_minutes(self.get_duration())
