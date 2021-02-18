@@ -24,6 +24,12 @@ cd django-orm-watching-storage
 ```
 pip install -r requirements.txt
 ```
+Создайте .env файл с конфигурацией
+```
+DB_SETTINGS=postgres://USER:PASSWORD@HOST:PORT/NAME
+SECRET_KEY=YOUR_KEY
+DEBUG=true
+```
 Запустите сайт:
 ```
 python manage.py runserver 0.0.0.0:8000
