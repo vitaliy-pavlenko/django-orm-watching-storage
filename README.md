@@ -27,11 +27,16 @@ pip install -r requirements.txt
 Создайте .env файл с конфигурацией
 ```
 DB_SETTINGS=postgres://USER:PASSWORD@HOST:PORT/NAME
-SECRET_KEY=YOUR_KEY
-DEBUG=true
 ```
 Запустите сайт:
 ```
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 8000
 ```
 Откройте сайт в браузере по адресу [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+Дополнительные настройки в .env
+```
+SECRET_KEY=YOUR_KEY
+DEBUG=true
+ALLOWED_HOSTS=host1,host2
+```
